@@ -5,6 +5,7 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import main.Disciplina;
 import main.Aluno;
+import main.Professor;
 
 public class DisciplinaTest {
 
@@ -38,4 +39,21 @@ public class DisciplinaTest {
         assertEquals(1, disciplina.numeroDeAlunos(),
                 "Aluno não deveria ser adicionado duas vezes na mesma disciplina");
     }
+
+    @Test
+    public void naoPermitirAdicionarMaisDeUmProfessorNaDisciplina() {
+        Disciplina disciplina = new Disciplina("Engenharia de Software II", "ESWII2025", 60, "Terça 07h-09h | Quinta 07-09h");
+        Professor professor1 = new Professor("Sabrina de Figueirêdo");
+        Professor professor2 = new Professor("Dunfrey Aragão");
+
+        // Primeiro professor consegue ser adicionado
+        disciplina.setProfessor(professor1);
+
+        // Tentar adicionar segundo professor
+        boolean resultado = disciplina.setProfessor(professor2);
+
+        assertFalse(resultado, "Não deve permitir adicionar um segundo professor à mesma disciplina");
+        assertEquals(professor1, disciplina.getProfessor(), "O professor da disciplina deve continuar sendo o primeiro");
+    }
+
 }
