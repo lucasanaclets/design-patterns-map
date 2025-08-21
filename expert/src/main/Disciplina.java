@@ -1,3 +1,5 @@
+package main;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +19,9 @@ public class Disciplina {
     }
 
     public void adicionarAluno(Aluno aluno) {
-        alunosMatriculados.add(aluno);
+        if (!alunosMatriculados.contains(aluno)) {
+            alunosMatriculados.add(aluno);
+        }
     }
 
     public int numeroDeAlunos() {

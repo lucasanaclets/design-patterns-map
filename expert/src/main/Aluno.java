@@ -1,3 +1,5 @@
+package main;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -13,8 +15,10 @@ public class Aluno {
     }
 
     public void matricular(Disciplina disciplina){
-        this.disciplinasMatriculadas.add(disciplina);
-        disciplina.adicionarAluno(this);
+        if (!disciplinasMatriculadas.contains(disciplina)) {
+            this.disciplinasMatriculadas.add(disciplina);
+            disciplina.adicionarAluno(this);
+        }
     }
 
     // Getters e Setters

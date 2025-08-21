@@ -1,3 +1,5 @@
+package main;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,7 +13,9 @@ public class Professor {
     }
 
     public void adicionarDisciplina(Disciplina disciplina) {
-        disciplinasMinistradas.add(disciplina);
+        if (!disciplinasMinistradas.contains(disciplina)) {
+            disciplinasMinistradas.add(disciplina);
+        }
     }
 
     // Getters e Setters
