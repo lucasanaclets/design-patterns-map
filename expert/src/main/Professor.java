@@ -13,8 +13,10 @@ public class Professor {
     }
 
     public void adicionarDisciplina(Disciplina disciplina) {
-        if (!disciplinasMinistradas.contains(disciplina)) {
+        if (disciplina.setProfessor(this)) {
             disciplinasMinistradas.add(disciplina);
+        } else {
+            System.out.println("Falha ao processar: A disciplina " + disciplina.getNome() + " já possui professor!");
         }
     }
 

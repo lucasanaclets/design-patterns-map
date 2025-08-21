@@ -41,7 +41,7 @@ public class ControleAcademico {
         aluno3.matricular(sistemasOperacionais);
         aluno3.matricular(engenhariaDeSoftwareII);
 
-        System.out.print("➡️ 1 - Quais disciplinas um professor está ministrando: \n\n");
+        System.out.print("\n➡️ 1 - Quais disciplinas um professor está ministrando: \n\n");
 
         System.out.println("Disciplinas ministradas por: " + professor1.getNome());
         for ( Disciplina disciplina : professor1.getDisciplinasMinistradas() ) {

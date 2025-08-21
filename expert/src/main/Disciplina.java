@@ -9,6 +9,7 @@ public class Disciplina {
     private int cargaHoraria;
     private List<Aluno> alunosMatriculados;
     private String horario;
+    private Professor professor;
 
     public Disciplina(String nome, String codigo, int cargaHoraria, String horario) {
         this.nome = nome;
@@ -16,6 +17,7 @@ public class Disciplina {
         this.cargaHoraria = cargaHoraria;
         this.horario = horario;
         this.alunosMatriculados = new ArrayList<>();
+        this.professor = null;
     }
 
     public void adicionarAluno(Aluno aluno) {
@@ -70,4 +72,19 @@ public class Disciplina {
     public void setHorario(String horario) {
         this.horario = horario;
     }
+
+    public Professor getProfessor() {
+        return professor;
+    }
+
+    public boolean setProfessor(Professor professor) {
+        if (this.professor == null) {
+            this.professor = professor;
+            return true;
+        }
+        return false;
+    }
+
+
+
 }
