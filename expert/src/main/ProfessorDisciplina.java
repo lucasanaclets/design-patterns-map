@@ -24,4 +24,12 @@ public class ProfessorDisciplina {
         }
         return false; // disciplina já tem professor
     }
+
+    public boolean removerProfessor() {
+        if (this.professor != null) {
+            this.professor = null;
+            return true;
+        }
+        return false; // não havia professor atribuído
+    }
 }

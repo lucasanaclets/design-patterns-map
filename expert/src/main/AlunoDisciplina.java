@@ -27,4 +27,12 @@ public class AlunoDisciplina {
         }
         return false; // aluno já está matriculado
     }
+
+    public boolean removerAluno(Aluno aluno) {
+        if (alunos.contains(aluno)) {
+            alunos.remove(aluno);
+            return true;
+        }
+        return false; // aluno não estava matriculado
+    }
 }
