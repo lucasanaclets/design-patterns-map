@@ -1,32 +1,31 @@
 package main;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
 
-        // ----------------- INSTÂNCIAS -----------------
+        ControleAcademico CA = new ControleAcademico();
 
-        Professor sabrinaDeFigueiredo = new Professor("Sabrina de Figueirêdo");
-        Professor dunfreyAragao = new Professor("Dunfrey Aragão");
-        Professor robsonPequeno = new Professor("Robson Pequeno");
-        Professor anaIsabella = new Professor("Ana Isabella");
-        Professor wellingtonCandeia = new Professor("Wellington Candeia");
+        // ----------------- CRIANDO ENTIDADES -----------------
 
-        Disciplina engenhariaDeSoftwareII = new Disciplina("Engenharia de Software II", "ESWII2025", 60, "Terça 07h-09h | Quinta 07-09h");
-        Disciplina sistemasOperacionais = new Disciplina("Sistemas Operacionais", "SO2025", 60, "Segunda 14h-16h | Quarta 14h-16h");
-        Disciplina computacaoGrafica = new Disciplina("Computação Gráfica", "CG2025", 60, "Terça 09h-11h | Quinta 11h-13h");
-        Disciplina gerenciaDeProjetos = new Disciplina("Gerência de Projetos", "GP2025", 60, "Segunda 11h-13h | Sexta 07-09h");
-        Disciplina interconexaoDeComputadores = new Disciplina("Interconexão e Segurança de Redes de Computadores", "INT2025", 60, "Segunda 07h-09h | Quinta 09h-11h");
-        Disciplina inteligenciaArtificial = new Disciplina("Inteligência Artificial", "IA2025", 60, "Quarta 09h-11h | Sexta 09h-11h");
+        Professor sabrinaDeFigueiredo = CA.adicionarNovoProfessor("Sabrina de Figueirêdo");
+        Professor dunfreyAragao = CA.adicionarNovoProfessor("Dunfrey Aragão");
+        Professor robsonPequeno = CA.adicionarNovoProfessor("Robson Pequeno");
+        Professor anaIsabella = CA.adicionarNovoProfessor("Ana Isabella");
+        Professor wellingtonCandeia = CA.adicionarNovoProfessor("Wellington Candeia");
 
-        Aluno lucasAnacleto = new Aluno("Lucas Anacleto", "2201080090");
-        Aluno matheusAbreu = new Aluno("Matheus Abreu", "2201080091");
+        Disciplina engenhariaDeSoftwareII = CA.adicionarNovaDisciplina("Engenharia de Software II", "ESWII2025", 60, "Terça 07h-09h | Quinta 07-09h");
+        Disciplina sistemasOperacionais = CA.adicionarNovaDisciplina("Sistemas Operacionais", "SO2025", 60, "Segunda 14h-16h | Quarta 14h-16h");
+        Disciplina computacaoGrafica = CA.adicionarNovaDisciplina("Computação Gráfica", "CG2025", 60, "Terça 09h-11h | Quinta 11h-13h");
+        Disciplina gerenciaDeProjetos = CA.adicionarNovaDisciplina("Gerência de Projetos", "GP2025", 60, "Segunda 11h-13h | Sexta 07-09h");
+        Disciplina interconexaoDeComputadores = CA.adicionarNovaDisciplina("Interconexão e Segurança de Redes de Computadores", "INT2025", 60, "Segunda 07h-09h | Quinta 09h-11h");
+        Disciplina inteligenciaArtificial = CA.adicionarNovaDisciplina("Inteligência Artificial", "IA2025", 60, "Quarta 09h-11h | Sexta 09h-11h");
+
+        Aluno lucasAnacleto = CA.adicionarNovoAluno("Lucas Anacleto", "2201080090");
+        Aluno matheusAbreu = CA.adicionarNovoAluno("Matheus Abreu", "2201080091");
 
         // ----------------- ASSOCIAÇÕES E MATRICULAS -----------------
-
-        ControleAcademico CA = new ControleAcademico();
 
         CA.associarProfessor(sabrinaDeFigueiredo, engenhariaDeSoftwareII);
         CA.associarProfessor(dunfreyAragao, sistemasOperacionais);
