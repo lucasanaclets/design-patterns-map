@@ -15,12 +15,11 @@ public class FigurasGeometricas {
     private Circulo circulo;
 
     public FigurasGeometricas(
-
             double alturaRetangulo,
             double larguraRetangulo,
             double comprimentoLadoQuadrado,
-            double raioCirculo)
-            throws FiguraException {
+            double raioCirculo
+    ) throws FiguraException {
         this.retangulo = new Retangulo(alturaRetangulo, larguraRetangulo);
         this.quadrado = new Quadrado(comprimentoLadoQuadrado);
         this.circulo = new Circulo(raioCirculo);
