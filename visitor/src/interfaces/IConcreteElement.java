@@ -1,5 +1,5 @@
 package interfaces;
 
-public interface IElementoConcreto {
+public interface IConcreteElement {
     public void aceitaVisita(IVisitor v);
 }

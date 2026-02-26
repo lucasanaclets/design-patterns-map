@@ -1,10 +1,10 @@
 package entities;
 
 import exceptions.ExceptionEntity;
-import interfaces.IElementoConcreto;
+import interfaces.IConcreteElement;
 import interfaces.IVisitor;
 
-public class Rectangle implements IElementoConcreto {
+public class Rectangle implements IConcreteElement {
     private int largura;
     private int altura;
 

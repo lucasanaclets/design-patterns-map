@@ -1,9 +1,10 @@
 package entities;
 
 import exceptions.ExceptionEntity;
+import interfaces.IConcreteElement;
 import interfaces.IVisitor;
 
-public class Triangle {
+public class Triangle implements IConcreteElement {
     private int base;
     private int altura;
     private int lado1;

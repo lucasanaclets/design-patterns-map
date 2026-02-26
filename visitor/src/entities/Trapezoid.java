@@ -1,10 +1,10 @@
 package entities;
 
 import exceptions.ExceptionEntity;
-import interfaces.IElementoConcreto;
+import interfaces.IConcreteElement;
 import interfaces.IVisitor;
 
-public class Trapezoid implements IElementoConcreto {
+public class Trapezoid implements IConcreteElement {
     private int baseMenor;
     private int baseMaior;
     private int altura;
@@ -20,7 +20,6 @@ public class Trapezoid implements IElementoConcreto {
             throw new ExceptionEntity("Medidas formam trapézio inválido");
         }
 
-
         this.baseMenor = baseMenor;
         this.baseMaior = baseMaior;
         this.altura = altura;
@@ -30,7 +29,6 @@ public class Trapezoid implements IElementoConcreto {
 
     public void aceitaVisita(IVisitor v) {
         v.visitaTrapezio(this);
-
     }
 
     public int getLado1() {

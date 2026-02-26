@@ -1,10 +1,10 @@
 package entities;
 
 import exceptions.ExceptionEntity;
-import interfaces.IElementoConcreto;
+import interfaces.IConcreteElement;
 import interfaces.IVisitor;
 
-public class Circle implements IElementoConcreto {
+public class Circle implements IConcreteElement {
 
     private double raio;
 
