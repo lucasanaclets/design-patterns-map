@@ -27,8 +27,8 @@ public class Trapezoid implements IConcreteElement {
         this.lado2=lado2;
     }
 
-    public void aceitaVisita(IVisitor v) {
-        v.visitaTrapezio(this);
+    public double aceitaVisita(IVisitor v) {
+       return v.visitaTrapezio(this);
     }
 
     public int getLado1() {

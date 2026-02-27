@@ -14,8 +14,8 @@ public class Rectangle implements IConcreteElement {
         this.altura = altura;
     }
 
-    public void aceitaVisita(IVisitor v) {
-        v.visitaRetangulo(this);
+    public double aceitaVisita(IVisitor v) {
+        return v.visitaRetangulo(this);
     }
 
     public int getLargura() {

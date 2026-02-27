@@ -21,7 +21,7 @@ public class RectangleTest {
     }
 
     @Test (expected = ExceptionEntity.class)
-    public void criarRetanguloLarguraInvalidoTest() throws ExceptionEntity {
+    public void criarRetanguloLarguraInvalidaTest() throws ExceptionEntity {
         new Rectangle(-1,7);
     }
 

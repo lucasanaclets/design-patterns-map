@@ -24,8 +24,8 @@ public class Triangle implements IConcreteElement {
         this.lado2 = lado2;
     }
 
-    public void aceitaVisita(IVisitor v) {
-        v.visitaTriangulo(this);
+    public double aceitaVisita(IVisitor v) {
+       return v.visitaTriangulo(this);
     }
 
     public int getLado1() {

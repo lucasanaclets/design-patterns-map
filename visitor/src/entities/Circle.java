@@ -13,8 +13,8 @@ public class Circle implements IConcreteElement {
         this.raio = r;
     }
 
-    public void aceitaVisita(IVisitor v) {
-        v.visitaCirculo(this);
+    public double aceitaVisita(IVisitor v) {
+        return v.visitaCirculo(this);
     }
 
     public double getRaio() {
