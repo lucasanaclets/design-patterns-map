@@ -1,4 +1,4 @@
-package model.event;
+package model.observer;
 
 import model.entities.Assento;
 

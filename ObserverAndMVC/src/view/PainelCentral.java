@@ -1,8 +1,8 @@
 package view;
 
 import model.entities.Assento;
-import model.event.AssentoEvent;
-import model.event.AssentoListener;
+import model.observer.AssentoEvent;
+import model.observer.AssentoListener;
 
 public class PainelCentral implements AssentoListener {
 

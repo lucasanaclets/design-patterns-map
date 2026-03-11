@@ -2,8 +2,8 @@ package tests;
 
 import model.entities.Onibus;
 import model.entities.StatusAssento;
-import model.event.AssentoEvent;
-import model.event.AssentoListener;
+import model.observer.AssentoEvent;
+import model.observer.AssentoListener;
 import org.junit.Test;
 
 import static org.junit.Assert.assertTrue;

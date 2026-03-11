@@ -1,4 +1,4 @@
-package model.event;
+package model.observer;
 
 public interface AssentoListener {
 

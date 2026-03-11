@@ -1,8 +1,8 @@
 package model.entities;
 
-import model.event.AssentoEvent;
-import model.event.AssentoListener;
-import model.event.AssentoSource;
+import model.observer.AssentoEvent;
+import model.observer.AssentoListener;
+import model.observer.AssentoSource;
 
 import java.util.ArrayList;
 import java.util.List;
